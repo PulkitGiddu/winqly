@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - Demo</title>
+  <meta name="description" content="Meet the Demo team — designers, developers, and deliberate thinkers crafting creative solutions with technical precision." />
+  <link rel="stylesheet" href="/css/variables.css" />
+  <link rel="stylesheet" href="/css/reset.css" />
+  <link rel="stylesheet" href="/css/base.css" />
+  <link rel="stylesheet" href="/css/header.css" />
+  <link rel="stylesheet" href="/css/gallery.css" />
+  <link rel="stylesheet" href="/css/marquee.css" />
+  <link rel="stylesheet" href="/css/footer.css" />
+  <link rel="stylesheet" href="/css/popup.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='80'>🍑</text></svg>" />
+  <style>
+    .about-hero {
+      padding-top: calc(var(--header-height) + 4rem);
+      padding-bottom: var(--space-3xl);
+    }
+    .about-hero-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--color-text-muted);
+      margin-top: var(--space-lg);
+      margin-bottom: var(--space-md);
+    }
+    .about-hero h1 {
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: clamp(3rem, 8vw, 7rem);
+      text-transform: uppercase;
+      line-height: 0.92;
+      letter-spacing: -0.02em;
+      color: var(--color-text);
+      max-width: 16ch;
+    }
+    .about-description {
+      margin-top: var(--space-2xl);
+      font-family: var(--font-body);
+      font-size: clamp(1rem, 1.5vw, 1.25rem);
+      line-height: 1.7;
+      color: var(--color-text-muted);
+      max-width: 60ch;
+    }
+    .about-studio-image {
+      width: 100%;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      margin-bottom: var(--space-section);
+    }
+    .about-studio-image img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 21/9;
+      object-fit: cover;
+    }
+
+    /* ── Our Values Section (matching screenshot) ── */
+    .our-values {
+      padding: var(--space-section) 0;
+    }
+    .our-values-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: var(--space-3xl);
+      align-items: start;
+    }
+    .our-values h2 {
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      text-transform: uppercase;
+      color: var(--color-text);
+      line-height: 0.92;
+      font-style: italic;
+    }
+    .values-content {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xl);
+    }
+    .values-tabs {
+      display: flex;
+      gap: var(--space-lg);
+    }
+    .values-tab-btn {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-text-muted);
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.3em 0;
+      border-bottom: 1px solid transparent;
+      transition: color 0.3s, border-color 0.3s;
+    }
+    .values-tab-btn:hover,
+    .values-tab-btn.active {
+      color: var(--color-text);
+      border-bottom-color: var(--color-text);
+    }
+    .values-description {
+      font-family: var(--font-body);
+      font-size: clamp(1rem, 1.5vw, 1.2rem);
+      line-height: 1.7;
+      color: var(--color-text-muted);
+      max-width: 50ch;
+    }
+    .values-images {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      margin-top: var(--space-xl);
+    }
+    .values-images img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+    }
+
+    /* ── Meet The Team Section ── */
+    .about-team {
+      padding: var(--space-section) 0;
+    }
+    .about-team h2 {
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      text-transform: uppercase;
+      color: var(--color-text);
+      margin-bottom: var(--space-3xl);
+    }
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-lg);
+    }
+    .team-member {
+      text-align: center;
+    }
+    .team-member-photo {
+      width: 100%;
+      aspect-ratio: 1;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      margin-bottom: var(--space-md);
+      background: var(--color-bg-card);
+    }
+    .team-member-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s var(--ease-out);
+    }
+    .team-member:hover .team-member-photo img {
+      transform: scale(1.05);
+    }
+    .team-member-name {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      color: var(--color-text);
+    }
+    .team-member-role {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-text-muted);
+      margin-top: 0.3em;
+    }
+
+    /* Join the Family card */
+    .team-member--join .team-member-photo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(243,241,231,0.05);
+      border: 2px dashed rgba(243,241,231,0.15);
+      cursor: pointer;
+      transition: border-color 0.3s, background 0.3s;
+    }
+    .team-member--join:hover .team-member-photo {
+      border-color: var(--color-yellow);
+      background: rgba(248,212,76,0.05);
+    }
+    .join-content {
+      text-align: center;
+      padding: var(--space-lg);
+    }
+    .join-icon {
+      font-size: 3rem;
+      margin-bottom: var(--space-sm);
+      opacity: 0.4;
+    }
+    .join-text {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      color: var(--color-text);
+    }
+    .join-subtext {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-text-muted);
+      margin-top: 0.3em;
+    }
+
+    /* Careers toast notification */
+    .careers-toast {
+      position: fixed;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%) translateY(120%);
+      background: var(--color-bg-card);
+      border: 1px solid rgba(243,241,231,0.15);
+      border-radius: var(--radius-lg);
+      padding: 1em 2em;
+      z-index: 10000;
+      transition: transform 0.5s var(--ease-out), opacity 0.5s;
+      opacity: 0;
+      pointer-events: none;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+    }
+    .careers-toast.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+    .careers-toast p {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--color-text);
+      white-space: nowrap;
+    }
+
+    @media (max-width: 900px) {
+      .our-values-layout { grid-template-columns: 1fr; }
+      .values-images { grid-template-columns: 1fr; }
+      .team-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="/" class="logo">Demo</a>
+      <nav class="nav-desktop" id="nav-desktop">
+        <a href="/work.html" class="nav-link" data-chars>Work</a>
+        <a href="/about.html" class="nav-link" data-chars>About</a>
+        <button class="nav-link nav-link-services" id="services-toggle" data-chars>Services <span class="chevron">▾</span></button>
+        <a href="/insights.html" class="nav-link" data-chars>Insights</a>
+        <a href="/contact.html" class="nav-link" data-chars>Contact</a>
+      </nav>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  <div class="mega-menu" id="mega-menu">
+    <div class="mega-menu-inner">
+      <div class="mega-menu-column"><h3>Web Design</h3><p>Captivate and delight your audience.</p><div class="mega-menu-links"><a href="#">UI & UX Design</a><a href="#">Accessibility</a><a href="#">Brand Development</a></div><a href="#" class="mega-menu-cta">Find out more</a></div>
+      <div class="mega-menu-column"><h3>Web Development</h3><p>Push your footprint further.</p><div class="mega-menu-links"><a href="#">Website Hosting</a><a href="#">WordPress Development</a><a href="#">WordPress Migrations</a></div><a href="#" class="mega-menu-cta">Find out more</a></div>
+      <div class="mega-menu-column"><h3>Digital Platforms</h3><p>Integrated web apps and software.</p><div class="mega-menu-links"><a href="#">APIs & Integrations</a><a href="#">Software Development</a><a href="#">Web App Development</a></div><a href="#" class="mega-menu-cta">Find out more</a></div>
+    </div>
+  </div>
+  <nav class="nav-mobile" id="nav-mobile">
+    <a href="/work.html" class="nav-link">Work</a><a href="/about.html" class="nav-link">About</a><a href="#" class="nav-link">Services</a><a href="/insights.html" class="nav-link">Insights</a><a href="/contact.html" class="nav-link">Contact</a>
+  </nav>
+
+  <main>
+    <section class="about-hero">
+      <div class="container">
+        <hr class="separator" />
+        <p class="about-hero-eyebrow reveal">Designers, Developers, and Deliberate Thinkers</p>
+        <h1 class="reveal reveal-delay-1">Creative Solutions. Technical Precision</h1>
+        <p class="about-description reveal reveal-delay-2">We know how to squeeze every last drop of performance out of WordPress. But it's the cohesive experiences we shape across every digital touchpoint that sets you – and us – apart.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="about-studio-image reveal">
+        <img src="/images/gallery-office.png" alt="Demo studio" loading="lazy" />
+      </div>
+    </div>
+
+    <!-- ── Our Values Section ── -->
+    <section class="our-values">
+      <div class="container">
+        <div class="our-values-layout">
+          <h2 class="reveal">Our Values</h2>
+          <div class="values-content reveal reveal-delay-1">
+            <div class="values-tabs">
+              <button class="values-tab-btn active" data-value="deliberate">Deliberate</button>
+              <button class="values-tab-btn" data-value="scalable">Scalable</button>
+              <button class="values-tab-btn" data-value="progressive">Progressive</button>
+            </div>
+            <p class="values-description" id="values-description">Nothing is accidental. We make intentional decisions with outcomes in mind.</p>
+          </div>
+        </div>
+        <div class="values-images reveal reveal-delay-2">
+          <img src="/images/value-deliberate.png" alt="Deliberate" loading="lazy" />
+          <img src="/images/value-scalable.png" alt="Scalable" loading="lazy" />
+          <img src="/images/value-progressive.png" alt="Progressive" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Meet The Team ── -->
+    <section class="about-team">
+      <div class="container">
+        <h2 class="reveal">Meet The Team</h2>
+        <div class="team-grid">
+          <div class="team-member reveal">
+            <div class="team-member-photo"><img src="/images/team-photo.png" alt="Matt" loading="lazy" /></div>
+            <p class="team-member-name">Matt</p>
+            <p class="team-member-role">Founder & Creative Director</p>
+          </div>
+          <div class="team-member reveal reveal-delay-1">
+            <div class="team-member-photo"><img src="/images/gallery-office.png" alt="Sam" loading="lazy" /></div>
+            <p class="team-member-name">Sam</p>
+            <p class="team-member-role">Lead Developer</p>
+          </div>
+          <!-- Join the Family card -->
+          <div class="team-member team-member--join reveal reveal-delay-2" id="join-family-card">
+            <div class="team-member-photo">
+              <div class="join-content">
+                <div class="join-icon">+</div>
+                <p class="join-text">Join The Family</p>
+                <p class="join-subtext">Careers</p>
+              </div>
+            </div>
+            <p class="team-member-name">Your Name?</p>
+            <p class="team-member-role">Open Positions</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-section">
+      <div class="gallery-strip reveal">
+        <img src="/images/gallery-office.png" alt="Office" loading="lazy" />
+        <img src="/images/gallery-social.png" alt="Social" loading="lazy" />
+        <img src="/images/gallery-event.png" alt="Event" loading="lazy" />
+        <img src="/images/team-photo.png" alt="Team" loading="lazy" />
+        <img src="/images/gallery-office.png" alt="Studio" loading="lazy" />
+      </div>
+    </section>
+
+    <section class="marquee-section marquee-section--green">
+      <div class="marquee-track">
+        <div class="marquee-item"><span class="marquee-text">Ready to push your platform?</span><a href="/contact.html" class="marquee-btn">Get in touch today</a></div>
+        <div class="marquee-item"><span class="marquee-text">Ready to push your platform?</span><a href="/contact.html" class="marquee-btn">Get in touch today</a></div>
+        <div class="marquee-item"><span class="marquee-text">Ready to push your platform?</span><a href="/contact.html" class="marquee-btn">Get in touch today</a></div>
+        <div class="marquee-item"><span class="marquee-text">Ready to push your platform?</span><a href="/contact.html" class="marquee-btn">Get in touch today</a></div>
+        <div class="marquee-item"><span class="marquee-text">Ready to push your platform?</span><a href="/contact.html" class="marquee-btn">Get in touch today</a></div>
+        <div class="marquee-item"><span class="marquee-text">Ready to push your platform?</span><a href="/contact.html" class="marquee-btn">Get in touch today</a></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Careers Toast -->
+  <div class="careers-toast" id="careers-toast">
+    <p>🍑 Currently no open positions — check back soon!</p>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column"><div class="footer-links"><a href="/">Home</a><a href="/work.html">Work</a><a href="/insights.html">Insights</a><a href="/about.html">About</a><a href="#">Locations</a></div></div>
+        <div class="footer-column"><div class="footer-links"><a href="#">Web Design</a><a href="#">Web Development</a><a href="#">Digital Platforms</a><a href="#">Agency Partnerships</a><a href="#">All Services</a></div></div>
+        <div class="footer-column"><div class="footer-links"><a href="/contact.html">Contact</a><a href="#">Careers</a><a href="#">LinkedIn</a><a href="#">Facebook</a></div></div>
+        <div class="footer-column"><div class="footer-contact"><p class="footer-address">Studio B.15, The Old Church School,<br/>Butts Hill, Frome,<br/>BA11 1HR</p><div class="footer-contact-links"><a href="mailto:contact@demo.co.uk">contact@demo.co.uk</a><a href="tel:01373476446">01373 476446</a></div></div></div>
+      </div>
+      <div class="footer-bottom"><span class="footer-copyright">&copy;2026 Demo</span><div class="footer-legal"><a href="#">Cookie Policy</a><span class="footer-legal-sep">/</span><a href="#">Privacy Policy</a><span class="footer-legal-sep">/</span><a href="#">Sitemap</a></div></div>
+    </div>
+    <div class="footer-watermark" aria-hidden="true">D<span>e</span>m<span>o</span></div>
+  </footer>
+
+  <div class="cta-popup" id="cta-popup">
+    <button class="cta-popup-close" id="cta-popup-close" aria-label="Close">&times;</button>
+    <p class="cta-popup-text">Got a project in mind?<br/>We'd love to hear about it.</p>
+    <a href="/contact.html" class="cta-popup-link">Get in touch</a>
+  </div>
+  <script type="module" src="/js/main.js"></script>
+  <script>
+    // Values tabs switching
+    const tabBtns = document.querySelectorAll('.values-tab-btn');
+    const desc = document.getElementById('values-description');
+    const valuesData = {
+      deliberate: 'Nothing is accidental. We make intentional decisions with outcomes in mind.',
+      scalable: 'We build systems that grow. Every solution is architected to scale with your ambition.',
+      progressive: 'We push boundaries. Innovation isn\'t a buzzword — it\'s how we approach every project.'
+    };
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        desc.textContent = valuesData[btn.dataset.value];
+      });
+    });
+
+    // Join the Family click → show toast
+    const joinCard = document.getElementById('join-family-card');
+    const toast = document.getElementById('careers-toast');
+    if (joinCard && toast) {
+      joinCard.addEventListener('click', () => {
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 3000);
+      });
+    }
+  </script>
+</body>
+</html>

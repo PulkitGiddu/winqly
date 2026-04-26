@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Demo</title>
+  <meta name="description" content="Get in touch with Demo. We'd love to hear about your project." />
+  <link rel="stylesheet" href="/css/variables.css" />
+  <link rel="stylesheet" href="/css/reset.css" />
+  <link rel="stylesheet" href="/css/base.css" />
+  <link rel="stylesheet" href="/css/header.css" />
+  <link rel="stylesheet" href="/css/marquee.css" />
+  <link rel="stylesheet" href="/css/footer.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='80'>🍑</text></svg>" />
+  <style>
+    .contact-hero {
+      padding-top: calc(var(--header-height) + 4rem);
+      padding-bottom: var(--space-2xl);
+    }
+    .contact-hero h1 {
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: clamp(3rem, 8vw, 7rem);
+      text-transform: uppercase;
+      line-height: 0.92;
+      letter-spacing: -0.02em;
+      color: var(--color-text);
+      margin-top: var(--space-lg);
+    }
+    .contact-content {
+      padding: var(--space-2xl) 0 var(--space-section);
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: var(--space-3xl);
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-lg);
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5em;
+    }
+    .form-group label {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-text-muted);
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      background: var(--color-bg-card);
+      border: 1px solid rgba(243,241,231,0.12);
+      border-radius: var(--radius-md);
+      padding: 1em 1.2em;
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      color: var(--color-text);
+      transition: border-color 0.3s;
+      outline: none;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: var(--color-yellow);
+    }
+    .form-group textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+    .form-group select {
+      appearance: none;
+      cursor: pointer;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23a8a6a0' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 1.2em center;
+      padding-right: 3em;
+    }
+    .form-submit {
+      align-self: flex-start;
+      font-family: var(--font-mono);
+      font-size: var(--text-sm);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+      padding: 1em 2.5em;
+      border-radius: var(--radius-pill);
+      border: 2px solid var(--color-text);
+      background: var(--color-text);
+      color: var(--color-bg);
+      cursor: pointer;
+      transition: all 0.3s var(--ease-out);
+    }
+    .form-submit:hover {
+      background: var(--color-yellow);
+      border-color: var(--color-yellow);
+      color: var(--color-bg);
+      transform: translateY(-2px);
+    }
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2xl);
+    }
+    .contact-info-block h3 {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      color: var(--color-text);
+      margin-bottom: var(--space-md);
+    }
+    .contact-info-block p,
+    .contact-info-block a {
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      line-height: 1.7;
+      color: var(--color-text-muted);
+    }
+    .contact-info-block a {
+      display: block;
+      transition: color 0.3s;
+    }
+    .contact-info-block a:hover {
+      color: var(--color-yellow);
+    }
+    .contact-socials {
+      display: flex;
+      gap: var(--space-md);
+    }
+    .contact-socials a {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--color-text);
+      padding: 0.5em 1em;
+      border: 1px solid rgba(243,241,231,0.2);
+      border-radius: var(--radius-pill);
+      transition: all 0.3s var(--ease-out);
+    }
+    .contact-socials a:hover {
+      background: var(--color-text);
+      color: var(--color-bg);
+    }
+    @media (max-width: 900px) {
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="/" class="logo">Demo</a>
+      <nav class="nav-desktop" id="nav-desktop">
+        <a href="/work.html" class="nav-link" data-chars>Work</a>
+        <a href="/about.html" class="nav-link" data-chars>About</a>
+        <button class="nav-link nav-link-services" id="services-toggle" data-chars>Services <span class="chevron">▾</span></button>
+        <a href="/insights.html" class="nav-link" data-chars>Insights</a>
+        <a href="/contact.html" class="nav-link" data-chars>Contact</a>
+      </nav>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  <div class="mega-menu" id="mega-menu">
+    <div class="mega-menu-inner">
+      <div class="mega-menu-column"><h3>Web Design</h3><p>Captivate and delight your audience.</p><div class="mega-menu-links"><a href="#">UI & UX Design</a><a href="#">Accessibility</a><a href="#">Brand Development</a></div><a href="#" class="mega-menu-cta">Find out more</a></div>
+      <div class="mega-menu-column"><h3>Web Development</h3><p>Push your footprint further.</p><div class="mega-menu-links"><a href="#">Website Hosting</a><a href="#">WordPress Development</a><a href="#">WordPress Migrations</a></div><a href="#" class="mega-menu-cta">Find out more</a></div>
+      <div class="mega-menu-column"><h3>Digital Platforms</h3><p>Integrated web apps and software.</p><div class="mega-menu-links"><a href="#">APIs & Integrations</a><a href="#">Software Development</a><a href="#">Web App Development</a></div><a href="#" class="mega-menu-cta">Find out more</a></div>
+    </div>
+  </div>
+  <nav class="nav-mobile" id="nav-mobile">
+    <a href="/work.html" class="nav-link">Work</a><a href="/about.html" class="nav-link">About</a><a href="#" class="nav-link">Services</a><a href="/insights.html" class="nav-link">Insights</a><a href="/contact.html" class="nav-link">Contact</a>
+  </nav>
+
+  <main>
+    <section class="contact-hero">
+      <div class="container">
+        <hr class="separator" />
+        <p class="hero-eyebrow reveal" style="margin-top: var(--space-lg);">Let's Talk</p>
+        <h1 class="reveal reveal-delay-1">Get In Touch</h1>
+      </div>
+    </section>
+
+    <section class="contact-content">
+      <div class="container">
+        <div class="contact-grid">
+          <form class="contact-form reveal" id="contact-form" onsubmit="event.preventDefault(); alert('Thanks! We\'ll be in touch soon.');">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="John Smith" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="company">Company</label>
+              <input type="text" id="company" name="company" placeholder="Your Company" />
+            </div>
+            <div class="form-group">
+              <label for="service">What can we help with?</label>
+              <select id="service" name="service">
+                <option value="">Select a service</option>
+                <option value="web-design">Web Design</option>
+                <option value="web-development">Web Development</option>
+                <option value="digital-platforms">Digital Platforms</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Tell us about your project</label>
+              <textarea id="message" name="message" placeholder="Share your project details..." required></textarea>
+            </div>
+            <button type="submit" class="form-submit">Send Message</button>
+          </form>
+
+          <div class="contact-info reveal reveal-delay-2">
+            <div class="contact-info-block">
+              <h3>Our Studio</h3>
+              <p>Studio B.15, The Old Church School,<br/>Butts Hill, Frome,<br/>BA11 1HR</p>
+            </div>
+            <div class="contact-info-block">
+              <h3>Email Us</h3>
+              <a href="mailto:contact@demo.co.uk">contact@demo.co.uk</a>
+            </div>
+            <div class="contact-info-block">
+              <h3>Call Us</h3>
+              <a href="tel:01373476446">01373 476446</a>
+            </div>
+            <div class="contact-info-block">
+              <h3>Follow Us</h3>
+              <div class="contact-socials">
+                <a href="#">LinkedIn</a>
+                <a href="#">Facebook</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="marquee-section marquee-section--pink">
+      <div class="marquee-track">
+        <div class="marquee-item"><span class="marquee-text">Ready to push your platform?</span><a href="/contact.html" class="marquee-btn">Get in touch today</a></div>
+        <div class="marquee-item"><span class="marquee-text">Ready to push your platform?</span><a href="/contact.html" class="marquee-btn">Get in touch today</a></div>
+        <div class="marquee-item"><span class="marquee-text">Ready to push your platform?</span><a href="/contact.html" class="marquee-btn">Get in touch today</a></div>
+        <div class="marquee-item"><span class="marquee-text">Ready to push your platform?</span><a href="/contact.html" class="marquee-btn">Get in touch today</a></div>
+        <div class="marquee-item"><span class="marquee-text">Ready to push your platform?</span><a href="/contact.html" class="marquee-btn">Get in touch today</a></div>
+        <div class="marquee-item"><span class="marquee-text">Ready to push your platform?</span><a href="/contact.html" class="marquee-btn">Get in touch today</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column"><div class="footer-links"><a href="/">Home</a><a href="/work.html">Work</a><a href="/insights.html">Insights</a><a href="/about.html">About</a><a href="#">Locations</a></div></div>
+        <div class="footer-column"><div class="footer-links"><a href="#">Web Design</a><a href="#">Web Development</a><a href="#">Digital Platforms</a><a href="#">Agency Partnerships</a><a href="#">All Services</a></div></div>
+        <div class="footer-column"><div class="footer-links"><a href="/contact.html">Contact</a><a href="#">Careers</a><a href="#">LinkedIn</a><a href="#">Facebook</a></div></div>
+        <div class="footer-column"><div class="footer-contact"><p class="footer-address">Studio B.15, The Old Church School,<br/>Butts Hill, Frome,<br/>BA11 1HR</p><div class="footer-contact-links"><a href="mailto:contact@demo.co.uk">contact@demo.co.uk</a><a href="tel:01373476446">01373 476446</a></div></div></div>
+      </div>
+      <div class="footer-bottom"><span class="footer-copyright">&copy;2026 Demo</span><div class="footer-legal"><a href="#">Cookie Policy</a><span class="footer-legal-sep">/</span><a href="#">Privacy Policy</a><span class="footer-legal-sep">/</span><a href="#">Sitemap</a></div></div>
+    </div>
+    <div class="footer-watermark" aria-hidden="true">D<span>e</span>m<span>o</span></div>
+  </footer>
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>

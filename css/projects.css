@@ -1,0 +1,234 @@
+/* ========================================
+   Yellow Peach — Project Showcase Cards
+   ======================================== */
+
+.projects-section {
+  padding: 0 0 var(--space-section);
+}
+
+/* ── Stacking Cards ── */
+.project-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 80vh;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0;
+  position: sticky;
+  top: 0;
+}
+
+/* Each card overlaps the previous one, creating a stacking effect */
+.project-card + .project-card {
+  margin-top: -2rem;
+}
+
+.project-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: clamp(2rem, 4vw, 3.5rem);
+}
+
+.project-card-top {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.project-card-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.project-card-name {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-right: auto;
+}
+
+.project-card-heading {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+
+.project-card-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.project-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  transition: gap 0.3s var(--ease-out);
+}
+
+.project-card-link::after {
+  content: '↘';
+  font-size: 1.2em;
+  transition: transform 0.3s var(--ease-out);
+}
+
+.project-card-link:hover {
+  gap: 0.8em;
+}
+
+.project-card-link:hover::after {
+  transform: translate(3px, 3px);
+}
+
+/* Stats */
+.project-card-stats {
+  display: flex;
+  gap: var(--space-2xl);
+  padding-top: var(--space-lg);
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-value {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  line-height: 1.1;
+}
+
+.stat-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-top: 0.3em;
+}
+
+/* Image side */
+.project-card-image {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-2xl);
+  overflow: hidden;
+}
+
+.project-card-image img {
+  width: 90%;
+  max-width: 550px;
+  border-radius: var(--radius-md);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  transition: transform 0.6s var(--ease-out);
+}
+
+.project-card:hover .project-card-image img {
+  transform: scale(1.02) rotate(-0.5deg);
+}
+
+/* Background blur image */
+.project-card-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.project-card-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(30px) brightness(0.7);
+  transform: scale(1.2);
+}
+
+.project-card-image > img {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Color Variants ── */
+.project-card--red {
+  background: var(--color-red);
+  color: var(--color-text);
+}
+
+.project-card--blue {
+  background: var(--color-blue);
+  color: var(--color-text-dark);
+}
+
+.project-card--blue .tag {
+  color: var(--color-text-dark);
+  border-color: var(--color-text-dark);
+}
+
+.project-card--purple {
+  background: var(--color-purple);
+  color: var(--color-text);
+}
+
+.project-card--teal {
+  background: var(--color-teal);
+  color: var(--color-text);
+}
+
+.project-card--olive {
+  background: #d4c9a3;
+  color: var(--color-text-dark);
+}
+
+.project-card--olive .tag {
+  color: var(--color-text-dark);
+  border-color: var(--color-text-dark);
+}
+
+.project-card--olive .project-card-stats {
+  border-top-color: rgba(0,0,0,0.2);
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .project-card {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    position: relative;
+    top: auto;
+    margin-bottom: var(--space-lg);
+  }
+
+  .project-card + .project-card {
+    margin-top: 0;
+  }
+
+  .project-card-image {
+    min-height: 300px;
+    padding: var(--space-xl);
+  }
+
+  .project-card-content {
+    order: 1;
+  }
+
+  .project-card-image {
+    order: 2;
+  }
+}
