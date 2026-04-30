@@ -148,11 +148,41 @@ export function initNav() {
 
   // ── Mobile menu toggle ──
   if (menuToggle && navMobile) {
-    menuToggle.addEventListener('click', () => {
+    const mobileServicesToggle = document.getElementById('mobile-services-toggle');
+
+    const toggleMobileMenu = (forceClose = false) => {
       const isActive = menuToggle.classList.contains('active');
-      menuToggle.classList.toggle('active');
-      navMobile.classList.toggle('active');
-      document.body.style.overflow = isActive ? '' : 'hidden';
-    });
+      if (forceClose || isActive) {
+        menuToggle.classList.remove('active');
+        navMobile.classList.remove('active');
+        document.body.style.overflow = '';
+      } else {
+        menuToggle.classList.add('active');
+        navMobile.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    };
+
+    menuToggle.addEventListener('click', () => toggleMobileMenu());
+
+    if (mobileServicesToggle) {
+      mobileServicesToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        // Hide mobile nav first
+        toggleMobileMenu(true);
+        
+        // Small delay to allow mobile nav to start closing, then open mega menu
+        setTimeout(() => {
+          if (megaMenu) {
+            megaMenu.classList.add('active');
+            if (servicesToggle) servicesToggle.classList.add('active');
+            header.classList.add('menu-open');
+            document.body.style.overflow = 'hidden';
+          }
+        }, 100);
+      });
+    }
   }
 }

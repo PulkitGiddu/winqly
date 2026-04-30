@@ -407,6 +407,18 @@
   font-family: var(--font-heading);
   font-weight: 800;
   text-transform: uppercase;
+  color: var(--color-text); /* Cream/White for visibility on dark bg */
+  border-bottom: 1px solid rgba(243, 241, 231, 0.1);
+  width: 100%;
+  padding: var(--space-sm) 0;
+}
+
+.nav-mobile .nav-link:hover {
+  color: var(--color-yellow);
+}
+
+.nav-mobile .nav-link::after {
+  background: var(--color-yellow);
 }
 
 /* ── Responsive ── */
@@ -421,5 +433,54 @@
 
   .nav-mobile {
     display: flex;
+  }
+
+  .mega-menu-page {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+    padding-bottom: var(--space-2xl);
+  }
+
+  .mega-menu {
+    padding-top: calc(var(--header-height) + 1.5rem);
+    min-height: 100vh;
+    overflow-y: auto;
+    display: block; /* Allow vertical scroll of the whole menu */
+  }
+
+  .mega-menu-column {
+    margin-bottom: var(--space-xl);
+  }
+
+  .mega-menu-column h3 {
+    font-size: 2.2rem;
+    margin-bottom: var(--space-sm);
+  }
+
+  .mega-menu-column p {
+    font-size: 1rem;
+    margin-bottom: var(--space-md);
+  }
+
+  .mega-menu-close-btn {
+    top: 1.2rem;
+    right: 1.5rem;
+    font-size: 2rem;
+  }
+
+  .mega-menu-arrow {
+    position: fixed;
+    top: auto;
+    bottom: 2rem;
+    right: 2rem;
+    transform: none;
+    width: 56px;
+    height: 56px;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  }
+
+  .mega-menu-arrow:hover {
+    transform: scale(1.1);
   }
 }
