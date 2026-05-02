@@ -1,0 +1,14 @@
+# Wynklo — robots.txt
+# https://www.wynklo.com/
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://www.wynklo.com/sitemap.xml
+
+# Disallow server/API routes from being indexed
+Disallow: /api/
+
+# Crawl-delay (optional, respectful to Googlebot)
+Crawl-delay: 1
