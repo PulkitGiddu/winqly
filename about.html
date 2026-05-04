@@ -14,9 +14,11 @@
   <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
 
   <!-- Primary SEO Meta Tags -->
-  <title>About Wynklo | Our Story, Values & Team | Digital Agency Pune</title>
-  <meta name="description" content="Meet the Wynklo team. We're designers, developers, and deliberate thinkers building digital solutions from Pune, India. Learn about our story, values, and the people behind your next project." />
-  <meta name="keywords" content="about Wynklo, digital agency team, web development team Pune, our story, tech company India, design team" />
+  <title>About Wynklo | Our Story, Values &amp; Team | Digital Agency Pune</title>
+  <meta name="description"
+    content="Meet the Wynklo team. We're designers, developers, and deliberate thinkers building digital solutions from Pune, India. Learn about our story, values, and the people behind your next project." />
+  <meta name="keywords"
+    content="about Wynklo, digital agency team, web development team Pune, our story, tech company India, design team" />
   <meta name="author" content="Wynklo" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="theme-color" content="#1a1a18" />
@@ -25,16 +27,18 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.wynklo.com/about.html" />
-  <meta property="og:title" content="About Wynklo | Our Story, Values & Team" />
-  <meta property="og:description" content="Designers, developers, and deliberate thinkers building digital solutions from Pune, India." />
+  <meta property="og:title" content="About Wynklo | Our Story, Values &amp; Team" />
+  <meta property="og:description"
+    content="Designers, developers, and deliberate thinkers building digital solutions from Pune, India." />
   <meta property="og:image" content="https://www.wynklo.com/images/og-image.png" />
   <meta property="og:site_name" content="Wynklo" />
   <meta property="og:locale" content="en_IN" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="About Wynklo | Our Story & Team" />
-  <meta name="twitter:description" content="Meet the team behind Wynklo — designers, developers, and deliberate thinkers." />
+  <meta name="twitter:title" content="About Wynklo | Our Story &amp; Team" />
+  <meta name="twitter:description"
+    content="Meet the team behind Wynklo — designers, developers, and deliberate thinkers." />
   <meta name="twitter:image" content="https://www.wynklo.com/images/og-image.png" />
 
   <!-- Structured Data: BreadcrumbList -->
@@ -54,7 +58,7 @@
   <link rel="stylesheet" href="/css/reset.css" />
   <link rel="stylesheet" href="/css/base.css" />
   <link rel="stylesheet" href="/css/header.css" />
-  <link rel="stylesheet" href="/css/about-section.css" />
+  <link rel="stylesheet" href="/css/about-page.css" />
   <link rel="stylesheet" href="/css/gallery.css" />
   <link rel="stylesheet" href="/css/marquee.css" />
   <link rel="stylesheet" href="/css/footer.css" />
@@ -64,128 +68,13 @@
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="apple-touch-icon" href="/images/og-image.png" />
-
-  <style>
-    .about-hero {
-      padding-top: calc(var(--header-height) + 4rem);
-      padding-bottom: var(--space-2xl);
-    }
-    .about-hero h1 {
-      font-family: var(--font-heading);
-      font-weight: 800;
-      font-size: clamp(3rem, 8vw, 6rem);
-      text-transform: uppercase;
-      line-height: 0.92;
-      letter-spacing: -0.02em;
-      color: var(--color-text);
-    }
-    .about-hero-eyebrow {
-      font-family: var(--font-mono);
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: var(--color-text-muted);
-      margin: var(--space-lg) 0 var(--space-md);
-    }
-    .about-description { display: flex; flex-direction: column; gap: var(--space-md); }
-    .about-description p {
-      font-family: var(--font-body);
-      font-size: clamp(1rem, 1.5vw, 1.2rem);
-      line-height: 1.7;
-      color: var(--color-text-muted);
-      max-width: 65ch;
-    }
-    .about-studio-image {
-      width: 100%;
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      margin-bottom: var(--space-section);
-    }
-    .about-studio-image img { width: 100%; height: auto; display: block; }
-    .our-values { padding: var(--space-section) 0; }
-    .our-values-layout {
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: var(--space-3xl);
-      align-items: start;
-      margin-bottom: var(--space-2xl);
-    }
-    .our-values h2 {
-      font-family: var(--font-heading);
-      font-weight: 800;
-      font-size: clamp(2rem, 4vw, 3.5rem);
-      text-transform: uppercase;
-      line-height: 1;
-      color: var(--color-text);
-    }
-    .values-tabs { display: flex; gap: var(--space-sm); margin-bottom: var(--space-md); flex-wrap: wrap; }
-    .values-tab-btn {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      padding: 0.5em 1.2em;
-      border: 1px solid rgba(243,241,231,0.15);
-      border-radius: var(--radius-pill);
-      color: var(--color-text-muted);
-      background: none;
-      cursor: pointer;
-      transition: all 0.3s;
-    }
-    .values-tab-btn.active, .values-tab-btn:hover {
-      color: var(--color-bg);
-      background: var(--color-yellow);
-      border-color: var(--color-yellow);
-    }
-    .values-description {
-      font-family: var(--font-body);
-      font-size: clamp(1rem, 1.5vw, 1.15rem);
-      line-height: 1.7;
-      color: var(--color-text-muted);
-    }
-    .values-images { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-md); }
-    .values-images img { width: 100%; border-radius: var(--radius-lg); aspect-ratio: 1; object-fit: cover; }
-    .about-team { padding: var(--space-section) 0; }
-    .about-team h2 {
-      font-family: var(--font-heading);
-      font-weight: 800;
-      font-size: clamp(2rem, 4vw, 3.5rem);
-      text-transform: uppercase;
-      line-height: 1;
-      color: var(--color-text);
-      margin-bottom: var(--space-2xl);
-    }
-    .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-lg); }
-    .team-member-photo {
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      margin-bottom: var(--space-sm);
-      aspect-ratio: 3/4;
-    }
-    .team-member-photo img { width: 100%; height: 100%; object-fit: cover; }
-    .team-member-name {
-      font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: 1.1rem;
-      text-transform: uppercase;
-      color: var(--color-text);
-    }
-    .team-member-role {
-      font-family: var(--font-mono);
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--color-text-muted);
-    }
-    @media (max-width: 900px) {
-      .our-values-layout { grid-template-columns: 1fr; }
-      .values-images { grid-template-columns: 1fr; }
-      .team-grid { grid-template-columns: 1fr; }
-    }
-  </style>
 </head>
 
 <body>
+
+  <!-- ══════════════════════════════════════
+       HEADER
+       ══════════════════════════════════════ -->
   <header class="site-header" id="site-header">
     <div class="header-inner">
       <a href="/" class="logo">Wynklo</a>
@@ -198,24 +87,23 @@
         <a href="/contact.html" class="nav-link" data-chars>Contact</a>
         <a href="/start.html" class="header-cta">Start a Project</a>
       </nav>
-      <button class="menu-toggle" id="menu-toggle"
-        aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
+
+  <!-- ══ Mega Menu ══ -->
   <div class="mega-menu" id="mega-menu">
     <button class="mega-menu-close-btn" id="mega-menu-close" aria-label="Close menu">&times;</button>
-
     <div class="mega-menu-slider" id="mega-menu-slider">
-      <!-- Page 1 -->
       <div class="mega-menu-inner mega-menu-page">
         <div class="mega-menu-column">
           <h3>Web Development</h3>
           <p>Custom websites and web applications built with modern frameworks like Next.js, React, and Node.js</p>
           <div class="mega-menu-links">
-            <a href="#">Responsive Design</a>
-            <a href="#">SEO Optimized</a>
-            <a href="#">Fast Loading</a>
-            <a href="#">Modern UI/UX</a>
+            <a href="#">Responsive Design</a><a href="#">SEO Optimized</a><a href="#">Fast Loading</a><a href="#">Modern
+              UI/UX</a>
           </div>
           <a href="#" class="mega-menu-cta">Find out more</a>
         </div>
@@ -223,36 +111,28 @@
           <h3>App Development</h3>
           <p>Native and cross-platform mobile applications for iOS and Android with seamless user experience</p>
           <div class="mega-menu-links">
-            <a href="#">Cross-Platform</a>
-            <a href="#">Native Performance</a>
-            <a href="#">App Store Ready</a>
-            <a href="#">Push Notifications</a>
+            <a href="#">Cross-Platform</a><a href="#">Native Performance</a><a href="#">App Store Ready</a><a
+              href="#">Push Notifications</a>
           </div>
           <a href="#" class="mega-menu-cta">Find out more</a>
         </div>
         <div class="mega-menu-column">
-          <h3>Domain & Hosting</h3>
+          <h3>Domain &amp; Hosting</h3>
           <p>Complete hosting solutions with domain registration, SSL certificates, and reliable uptime</p>
           <div class="mega-menu-links">
-            <a href="#">99.9% Uptime</a>
-            <a href="#">SSL Included</a>
-            <a href="#">Daily Backups</a>
-            <a href="#">24/7 Support</a>
+            <a href="#">99.9% Uptime</a><a href="#">SSL Included</a><a href="#">Daily Backups</a><a href="#">24/7
+              Support</a>
           </div>
           <a href="#" class="mega-menu-cta">Find out more</a>
         </div>
       </div>
-
-      <!-- Page 2 -->
       <div class="mega-menu-inner mega-menu-page">
         <div class="mega-menu-column">
           <h3>AI Integration</h3>
           <p>Chatbots and AI-powered features to enhance user engagement and automate customer support</p>
           <div class="mega-menu-links">
-            <a href="#">Smart Chatbots</a>
-            <a href="#">AI Analytics</a>
-            <a href="#">Automation</a>
-            <a href="#">Custom Training</a>
+            <a href="#">Smart Chatbots</a><a href="#">AI Analytics</a><a href="#">Automation</a><a href="#">Custom
+              Training</a>
           </div>
           <a href="#" class="mega-menu-cta">Find out more</a>
         </div>
@@ -260,10 +140,8 @@
           <h3>Design Services</h3>
           <p>Professional design services including Figma designs, posters, and complete brand identity</p>
           <div class="mega-menu-links">
-            <a href="#">Figma Designs</a>
-            <a href="#">Brand Identity</a>
-            <a href="#">Print Design</a>
-            <a href="#">UI/UX Design</a>
+            <a href="#">Figma Designs</a><a href="#">Brand Identity</a><a href="#">Print Design</a><a href="#">UI/UX
+              Design</a>
           </div>
           <a href="#" class="mega-menu-cta">Find out more</a>
         </div>
@@ -271,104 +149,208 @@
           <h3>Tech Integration</h3>
           <p>Integration of new technologies and third-party services to enhance your digital ecosystem</p>
           <div class="mega-menu-links">
-            <a href="#">API Integration</a>
-            <a href="#">Database Setup</a>
-            <a href="#">Cloud Services</a>
-            <a href="#">Security Implementation</a>
+            <a href="#">API Integration</a><a href="#">Database Setup</a><a href="#">Cloud Services</a><a
+              href="#">Security Implementation</a>
           </div>
           <a href="#" class="mega-menu-cta">Find out more</a>
         </div>
       </div>
     </div>
-
     <button class="mega-menu-arrow" id="mega-menu-arrow" aria-label="Next services">&#8594;</button>
   </div>
+
+  <!-- Mobile Nav -->
   <nav class="nav-mobile" id="nav-mobile">
-    <a href="/work.html" class="nav-link">Work</a><a href="/about.html" class="nav-link">About</a><a href="javascript:void(0)" class="nav-link" id="mobile-services-toggle">Services</a><a href="/insights.html" class="nav-link">Insights</a><a href="/contact.html"
-      class="nav-link">Contact</a>
+    <a href="/work.html" class="nav-link">Work</a>
+    <a href="/about.html" class="nav-link">About</a>
+    <a href="javascript:void(0)" class="nav-link" id="mobile-services-toggle">Services</a>
+    <a href="/insights.html" class="nav-link">Insights</a>
+    <a href="/contact.html" class="nav-link">Contact</a>
   </nav>
 
+
+  <!-- ══════════════════════════════════════
+       MAIN CONTENT
+       ══════════════════════════════════════ -->
   <main>
+
+    <!-- ── Hero ── -->
     <section class="about-hero">
       <div class="container">
         <hr class="separator" />
-        <p class="about-hero-eyebrow reveal">Designers, Developers, and Deliberate Thinkers</p>
-        <h1 class="reveal reveal-delay-1">Creative Solutions. Technical Precision</h1>
-        <div class="about-story reveal reveal-delay-2" style="margin-top: var(--space-2xl);">
-          <h2
-            style="font-family: var(--font-heading); font-size: 2rem; font-weight: 800; text-transform: uppercase; margin-bottom: var(--space-md);">
-            Our Story</h2>
-          <div class="about-description"
-            style="margin-top: 0; display: flex; flex-direction: column; gap: var(--space-md);">
-            <p>Our journey began with a simple idea: technology should work for people, not the other way around. In
-              just two years, we've grown from a two-person startup to a trusted partner for businesses looking to make
-              their mark in the digital world.</p>
-            <p>What sets us apart? We listen. We understand that behind every line of code is a business goal, a
-              customer need, or a dream waiting to be realized. Our approach combines technical excellence with genuine
-              human understanding.</p>
-            <p>We've had the privilege of working with amazing clients who've trusted us to bring their visions to life.
-              From sleek websites to complex web applications, each project has been a learning experience that's helped
-              us grow and refine our craft.</p>
-          </div>
-        </div>
+        <p class="about-hero-eyebrow reveal">Est. 2024 — Pune, India</p>
+        <h1 class="reveal reveal-delay-1">We Build <span class="text-yellow">Digital</span> That Matters</h1>
+        <p class="about-hero-sub reveal reveal-delay-2">
+          A team of designers, developers, and deliberate thinkers turning ambitious ideas
+          into products people actually use. No fluff. No guesswork. Just clarity and craft.
+        </p>
       </div>
     </section>
 
-    <div class="container">
+    <!-- ── Studio Image ── -->
+    <div class="container about-studio">
       <div class="about-studio-image reveal">
-        <img src="/images/gallery-office.png" alt="Wynklo studio" loading="lazy" />
+        <img src="/images/gallery-office.png" alt="Wynklo studio workspace" loading="lazy" />
       </div>
     </div>
 
-    <!-- ── Our Values Section ── -->
-    <section class="our-values">
+    <!-- ── Stats Bar ── -->
+    <section class="about-stats">
       <div class="container">
-        <div class="our-values-layout">
-          <h2 class="reveal">Our Values</h2>
-          <div class="values-content reveal reveal-delay-1">
-            <div class="values-tabs">
-              <button class="values-tab-btn active" data-value="deliberate">Deliberate</button>
-              <button class="values-tab-btn" data-value="scalable">Scalable</button>
-              <button class="values-tab-btn" data-value="progressive">Progressive</button>
-            </div>
-            <p class="values-description" id="values-description">Nothing is accidental. We make intentional decisions
-              with outcomes in mind.</p>
+        <div class="about-stats-grid">
+          <div class="about-stat reveal">
+            <div class="about-stat-number">15+</div>
+            <div class="about-stat-label">Projects Shipped</div>
           </div>
-        </div>
-        <div class="values-images reveal reveal-delay-2">
-          <img src="/images/value-deliberate.png" alt="Deliberate" loading="lazy" />
-          <img src="/images/value-scalable.png" alt="Scalable" loading="lazy" />
-          <img src="/images/value-progressive.png" alt="Progressive" loading="lazy" />
+          <div class="about-stat reveal reveal-delay-1">
+            <div class="about-stat-number">100%</div>
+            <div class="about-stat-label">Client Satisfaction</div>
+          </div>
+          <div class="about-stat reveal reveal-delay-2">
+            <div class="about-stat-number">2+</div>
+            <div class="about-stat-label">Years Building</div>
+          </div>
+          <div class="about-stat reveal reveal-delay-3">
+            <div class="about-stat-number">24/7</div>
+            <div class="about-stat-label">Support Available</div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ── Meet The Team ── -->
-    <section class="about-team">
+    <!-- ── Our Story ── -->
+    <section class="about-story section">
       <div class="container">
-        <h2 class="reveal">Meet The Team</h2>
+        <hr class="separator" style="margin-bottom: var(--space-3xl);" />
+        <div class="about-story-grid">
+          <h2 class="about-story-label reveal">Our Story</h2>
+          <div class="about-story-content reveal reveal-delay-1">
+            <p>
+              <strong>We started with a belief:</strong> technology should work for people, not the other way around.
+              In just two years, we've gone from a two-person startup to a trusted partner for businesses
+              across India and beyond.
+            </p>
+            <p>
+              What makes us different? <strong>We listen first.</strong> Behind every line of code is a business goal,
+              a customer need, or a dream waiting to be realized. We combine technical precision with genuine
+              human understanding.
+            </p>
+            <p>
+              Our clients don't just get a product — they get a partner who shows them exactly what
+              they'll receive before a single rupee is spent. <strong>Live previews. Clear features. Zero
+                surprises.</strong>
+            </p>
+            <p>
+              From sleek marketing websites to complex web applications and AI-powered platforms,
+              each project has sharpened our craft and deepened our commitment to quality.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Our Values ── -->
+    <section class="about-values section">
+      <div class="container">
+        <hr class="separator" style="margin-bottom: var(--space-3xl);" />
+        <div class="about-values-header reveal">
+          <h2>What We Stand For</h2>
+          <p>Three principles that shape every decision, every design, every line of code.</p>
+        </div>
+        <div class="about-values-grid">
+          <div class="value-card reveal">
+            <div class="value-card-number">01</div>
+            <h3>Deliberate</h3>
+            <p>Nothing is accidental. Every pixel, every interaction, every architectural decision is made with clear
+              outcomes in mind. We don't do "good enough."</p>
+          </div>
+          <div class="value-card reveal reveal-delay-1">
+            <div class="value-card-number">02</div>
+            <h3>Scalable</h3>
+            <p>We build systems that grow with you. Every solution is architected to handle tomorrow's traffic,
+              tomorrow's features, and tomorrow's ambition.</p>
+          </div>
+          <div class="value-card reveal reveal-delay-2">
+            <div class="value-card-number">03</div>
+            <h3>Progressive</h3>
+            <p>Innovation isn't a buzzword — it's how we approach every project. We stay ahead of the curve
+              so your product always feels modern and competitive.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Meet the Team ── -->
+    <section class="about-team section">
+      <div class="container">
+        <hr class="separator" style="margin-bottom: var(--space-3xl);" />
+        <div class="about-team-header">
+          <h2 class="reveal">The People Behind the Pixels</h2>
+          <p class="reveal reveal-delay-1">Small team. Big impact. Every member brings a unique
+            perspective to the table.</p>
+        </div>
         <div class="team-grid">
-          <div class="team-member reveal">
-            <div class="team-member-photo"><img src="/images/team/kovid.png" alt="Kovid Sharma" loading="lazy" /></div>
-            <p class="team-member-name">Kovid Sharma</p>
-            <p class="team-member-role">Technical Lead</p>
-          </div>
-          <div class="team-member reveal reveal-delay-1">
-            <div class="team-member-photo"><img src="/images/team/krishna.png" alt="Krishna Sudan" loading="lazy" />
+          <div class="team-card reveal">
+            <div class="team-card-photo">
+              <img src="/images/team/kovid.png" alt="Kovid Sharma — Technical Lead" loading="lazy" />
             </div>
-            <p class="team-member-name">Krishna Sudan</p>
-            <p class="team-member-role">Automation Specialist</p>
-          </div>
-          <div class="team-member reveal reveal-delay-2">
-            <div class="team-member-photo"><img src="/images/team/pulkit.png" alt="Pulkit Giddu" loading="lazy" />
+            <div class="team-card-info">
+              <p class="team-card-name">Kovid Sharma</p>
+              <p class="team-card-role">Technical Lead</p>
             </div>
-            <p class="team-member-name">Pulkit Giddu</p>
-            <p class="team-member-role">Full Stack Developer</p>
+          </div>
+          <div class="team-card reveal reveal-delay-1">
+            <div class="team-card-photo">
+              <img src="/images/team/krishna.png" alt="Krishna Sudan — Automation Specialist" loading="lazy" />
+            </div>
+            <div class="team-card-info">
+              <p class="team-card-name">Krishna Sudan</p>
+              <p class="team-card-role">Automation Specialist</p>
+            </div>
+          </div>
+          <div class="team-card reveal reveal-delay-2">
+            <div class="team-card-photo">
+              <img src="/images/team/pulkit.png" alt="Pulkit Giddu — Full Stack Developer" loading="lazy" />
+            </div>
+            <div class="team-card-info">
+              <p class="team-card-name">Pulkit Giddu</p>
+              <p class="team-card-role">Full Stack Developer</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- ── Our Process ── -->
+    <section class="about-process section">
+      <div class="container">
+        <hr class="separator" style="margin-bottom: var(--space-3xl);" />
+        <h2 class="reveal">How We Work</h2>
+        <div class="process-steps">
+          <div class="process-step reveal">
+            <h3>Discover</h3>
+            <p>We start by understanding your business, audience, and goals. No assumptions — just deep, honest
+              conversations.</p>
+          </div>
+          <div class="process-step reveal reveal-delay-1">
+            <h3>Preview</h3>
+            <p>See your product before it's built. Our AI-powered previews give you real clarity — before you invest
+              a single rupee.</p>
+          </div>
+          <div class="process-step reveal reveal-delay-2">
+            <h3>Build</h3>
+            <p>Clean code, modern frameworks, and scalable architecture. We build fast without cutting corners.</p>
+          </div>
+          <div class="process-step reveal reveal-delay-3">
+            <h3>Launch</h3>
+            <p>Seamless deployment, thorough testing, and ongoing support. Your launch day is just the beginning of our
+              partnership.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Gallery Strip ── -->
     <section class="gallery-section">
       <div class="gallery-strip reveal">
         <img src="/images/gallery-office.png" alt="Office" loading="lazy" />
@@ -379,20 +361,40 @@
       </div>
     </section>
 
+    <!-- ── CTA Section ── -->
+    <section class="about-cta section">
+      <div class="container">
+        <div class="about-cta-inner reveal">
+          <h2>Ready to Build Something Great?</h2>
+          <p>Tell us about your idea. We'll show you exactly what's possible — before you commit.</p>
+          <a href="/start.html" class="btn-pill">Start Your Project ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Marquee ── -->
     <section class="marquee-section marquee-section--green">
       <div class="marquee-track">
-        <div class="marquee-item"><span class="marquee-text">Ready to push your platform?</span><a href="/start.html" class="marquee-btn">Get in touch today</a></div>
-        <div class="marquee-item"><span class="marquee-text">Ready to push your platform?</span><a href="/start.html" class="marquee-btn">Get in touch today</a></div>
-        <div class="marquee-item"><span class="marquee-text">Ready to push your platform?</span><a href="/start.html" class="marquee-btn">Get in touch today</a></div>
-        <div class="marquee-item"><span class="marquee-text">Ready to push your platform?</span><a href="/start.html" class="marquee-btn">Get in touch today</a></div>
-        <div class="marquee-item"><span class="marquee-text">Ready to push your platform?</span><a href="/start.html" class="marquee-btn">Get in touch today</a></div>
-        <div class="marquee-item"><span class="marquee-text">Ready to push your platform?</span><a href="/start.html" class="marquee-btn">Get in touch today</a></div>
+        <div class="marquee-item"><span class="marquee-text">Ready to push your platform?</span><a href="/start.html"
+            class="marquee-btn">Get in touch today</a></div>
+        <div class="marquee-item"><span class="marquee-text">Ready to push your platform?</span><a href="/start.html"
+            class="marquee-btn">Get in touch today</a></div>
+        <div class="marquee-item"><span class="marquee-text">Ready to push your platform?</span><a href="/start.html"
+            class="marquee-btn">Get in touch today</a></div>
+        <div class="marquee-item"><span class="marquee-text">Ready to push your platform?</span><a href="/start.html"
+            class="marquee-btn">Get in touch today</a></div>
+        <div class="marquee-item"><span class="marquee-text">Ready to push your platform?</span><a href="/start.html"
+            class="marquee-btn">Get in touch today</a></div>
+        <div class="marquee-item"><span class="marquee-text">Ready to push your platform?</span><a href="/start.html"
+            class="marquee-btn">Get in touch today</a></div>
       </div>
     </section>
   </main>
 
 
-
+  <!-- ══════════════════════════════════════
+       FOOTER
+       ══════════════════════════════════════ -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
@@ -428,31 +430,42 @@
         <div class="footer-legal"><a href="#">Cookie Policy</a><span class="footer-legal-sep">/</span><a
             href="#">Privacy Policy</a><span class="footer-legal-sep">/</span><a href="#">Sitemap</a></div>
       </div>
-    </div>
       <!-- Trust Badges -->
       <div class="footer-trust">
         <span class="footer-trust-badge">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          </svg>
           SSL Secured
         </span>
         <span class="footer-trust-badge">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+            <polyline points="22 4 12 14.01 9 11.01" />
+          </svg>
           Verified Business
         </span>
         <span class="footer-trust-badge">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M2 12h20" />
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+          </svg>
           Global Clients
         </span>
         <span class="footer-trust-badge">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+          </svg>
           Registered Company
         </span>
       </div>
-
       <div class="footer-made-in">
         <span>Crafted with precision in India</span>
         <span class="flag">🇮🇳</span>
       </div>
+    </div>
     <div class="footer-watermark" aria-hidden="true">W<span>y</span>nkl<span>o</span></div>
   </footer>
 
@@ -461,41 +474,20 @@
     <p class="cta-popup-text">Got a project in mind?<br />We'd love to hear about it.</p>
     <a href="/start.html" class="cta-popup-link">Get in touch</a>
   </div>
+
   <!-- WhatsApp Float -->
-  <a href="https://wa.me/918491041426?text=Hi%20Wynklo%2C%20I'm%20interested%20in%20your%20services" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+  <a href="https://wa.me/918491041426?text=Hi%20Wynklo%2C%20I'm%20interested%20in%20your%20services" target="_blank"
+    class="whatsapp-float" aria-label="Chat on WhatsApp">
     <div class="whatsapp-btn">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+      </svg>
     </div>
     <span class="whatsapp-tooltip">Chat with us</span>
   </a>
-<script type="module" src="/js/main.js"></script>
-  <script>
-    // Values tabs switching
-    const tabBtns = document.querySelectorAll('.values-tab-btn');
-    const desc = document.getElementById('values-description');
-    const valuesData = {
-      deliberate: 'Nothing is accidental. We make intentional decisions with outcomes in mind.',
-      scalable: 'We build systems that grow. Every solution is architected to scale with your ambition.',
-      progressive: 'We push boundaries. Innovation isn\'t a buzzword — it\'s how we approach every project.'
-    };
-    tabBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        tabBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        desc.textContent = valuesData[btn.dataset.value];
-      });
-    });
 
-    // Join the Family click → show toast
-    const joinCard = document.getElementById('join-family-card');
-    const toast = document.getElementById('careers-toast');
-    if (joinCard && toast) {
-      joinCard.addEventListener('click', () => {
-        toast.classList.add('show');
-        setTimeout(() => toast.classList.remove('show'), 3000);
-      });
-    }
-  </script>
+  <script type="module" src="/js/main.js"></script>
 </body>
 
 </html>
