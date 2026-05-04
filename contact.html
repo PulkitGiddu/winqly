@@ -5,33 +5,39 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- ══ Primary SEO Meta Tags ══ -->
-  <title>Contact Wynklo | Get a Free Quote for Web & App Development</title>
-  <meta name="description" content="Contact Wynklo for a free quote on web development, app development, AI integration, and design services. Based in Pune, India — we serve clients worldwide. Call +91 8491041426 or email us today." />
-  <meta name="keywords" content="contact Wynklo, web development quote, app development pricing, hire web developer Pune, digital agency contact India, get free quote" />
+  <!-- Font Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Security Headers -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+
+  <!-- Primary SEO Meta Tags -->
+  <title>Contact Wynklo | Get In Touch | Web & App Development Agency Pune</title>
+  <meta name="description" content="Contact Wynklo for web development, app development, and digital solutions. Based in Pune, India. Email us, call us, or fill out our contact form to start your project today." />
+  <meta name="keywords" content="contact Wynklo, web development contact, app development inquiry, digital agency Pune contact, hire web developer India" />
   <meta name="author" content="Wynklo" />
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#1a1a18" />
   <link rel="canonical" href="https://www.wynklo.com/contact.html" />
 
-  <!-- ══ Open Graph / Facebook ══ -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.wynklo.com/contact.html" />
-  <meta property="og:title" content="Contact Wynklo | Get a Free Quote" />
-  <meta property="og:description" content="Reach out for a free quote on web development, app development & design services. We'd love to hear about your project." />
+  <meta property="og:title" content="Contact Wynklo | Get In Touch" />
+  <meta property="og:description" content="Ready to start your project? Contact Wynklo — web & app development agency in Pune, India." />
   <meta property="og:image" content="https://www.wynklo.com/images/og-image.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
   <meta property="og:site_name" content="Wynklo" />
   <meta property="og:locale" content="en_IN" />
 
-  <!-- ══ Twitter Card ══ -->
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Contact Wynklo | Get a Free Quote" />
-  <meta name="twitter:description" content="Get a free quote on web development, app development & design. Contact us today." />
+  <meta name="twitter:title" content="Contact Wynklo" />
+  <meta name="twitter:description" content="Get in touch with our team. Based in Pune, India." />
   <meta name="twitter:image" content="https://www.wynklo.com/images/og-image.png" />
 
-  <!-- ══ Structured Data: BreadcrumbList ══ -->
+  <!-- Structured Data: BreadcrumbList -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -43,181 +49,139 @@
   }
   </script>
 
-  <!-- ══ Stylesheets ══ -->
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="/css/variables.css" />
   <link rel="stylesheet" href="/css/reset.css" />
   <link rel="stylesheet" href="/css/base.css" />
   <link rel="stylesheet" href="/css/header.css" />
-  <link rel="stylesheet" href="/css/marquee.css" />
-  <link rel="stylesheet" href="/css/footer.css" />
-
-  <!-- ══ Favicon ══ -->
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="apple-touch-icon" href="/images/og-image.png" />
+  <!-- Contact page styles are inline below -->
   <style>
     .contact-hero {
       padding-top: calc(var(--header-height) + 4rem);
       padding-bottom: var(--space-2xl);
     }
-
     .contact-hero h1 {
       font-family: var(--font-heading);
       font-weight: 800;
-      font-size: clamp(3rem, 8vw, 7rem);
+      font-size: clamp(3rem, 8vw, 6rem);
       text-transform: uppercase;
       line-height: 0.92;
       letter-spacing: -0.02em;
       color: var(--color-text);
-      margin-top: var(--space-lg);
     }
-
     .contact-content {
-      padding: var(--space-2xl) 0 var(--space-section);
+      padding-bottom: var(--space-section);
     }
-
     .contact-grid {
       display: grid;
-      grid-template-columns: 1.5fr 1fr;
+      grid-template-columns: 1.2fr 0.8fr;
       gap: var(--space-3xl);
+      align-items: start;
     }
-
-    .contact-form {
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-lg);
+    .contact-form .form-group {
+      margin-bottom: var(--space-lg);
     }
-
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5em;
-    }
-
-    .form-group label {
+    .contact-form label {
       font-family: var(--font-mono);
-      font-size: 0.75rem;
+      font-size: 0.7rem;
       text-transform: uppercase;
       letter-spacing: 0.1em;
       color: var(--color-text-muted);
+      display: block;
+      margin-bottom: 0.5em;
     }
-
-    .form-group input,
-    .form-group textarea,
-    .form-group select {
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.8em 1em;
       background: var(--color-bg-card);
-      border: 1px solid rgba(243, 241, 231, 0.12);
+      border: 1px solid rgba(243,241,231,0.1);
       border-radius: var(--radius-md);
-      padding: 1em 1.2em;
+      color: var(--color-text);
       font-family: var(--font-body);
       font-size: var(--text-base);
-      color: var(--color-text);
       transition: border-color 0.3s;
-      outline: none;
     }
-
-    .form-group input:focus,
-    .form-group textarea:focus,
-    .form-group select:focus {
+    .contact-form input:focus,
+    .contact-form select:focus,
+    .contact-form textarea:focus {
+      outline: none;
       border-color: var(--color-yellow);
     }
-
-    .form-group textarea {
+    .contact-form textarea {
       min-height: 150px;
       resize: vertical;
     }
-
-    .form-group select {
-      appearance: none;
-      cursor: pointer;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23a8a6a0' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: right 1.2em center;
-      padding-right: 3em;
-    }
-
     .form-submit {
-      align-self: flex-start;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5em;
       font-family: var(--font-mono);
       font-size: var(--text-sm);
       text-transform: uppercase;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.05em;
       font-weight: 700;
-      padding: 1em 2.5em;
+      padding: 0.8em 2em;
       border-radius: var(--radius-pill);
-      border: 2px solid var(--color-text);
-      background: var(--color-text);
+      background: var(--color-yellow);
       color: var(--color-bg);
+      border: none;
       cursor: pointer;
       transition: all 0.3s var(--ease-out);
     }
-
     .form-submit:hover {
-      background: var(--color-yellow);
-      border-color: var(--color-yellow);
-      color: var(--color-bg);
       transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(253,208,17,0.3);
     }
-
     .contact-info {
       display: flex;
       flex-direction: column;
-      gap: var(--space-2xl);
+      gap: var(--space-xl);
     }
-
     .contact-info-block h3 {
       font-family: var(--font-heading);
       font-weight: 700;
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       text-transform: uppercase;
+      margin-bottom: 0.5em;
       color: var(--color-text);
-      margin-bottom: var(--space-md);
     }
-
     .contact-info-block p,
     .contact-info-block a {
       font-family: var(--font-body);
-      font-size: var(--text-base);
-      line-height: 1.7;
+      font-size: var(--text-sm);
       color: var(--color-text-muted);
-    }
-
-    .contact-info-block a {
-      display: block;
+      line-height: 1.6;
       transition: color 0.3s;
     }
-
     .contact-info-block a:hover {
       color: var(--color-yellow);
     }
-
     .contact-socials {
       display: flex;
       gap: var(--space-md);
     }
-
     .contact-socials a {
       font-family: var(--font-mono);
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       text-transform: uppercase;
       letter-spacing: 0.06em;
-      color: var(--color-text);
-      padding: 0.5em 1em;
-      border: 1px solid rgba(243, 241, 231, 0.2);
-      border-radius: var(--radius-pill);
-      transition: all 0.3s var(--ease-out);
     }
-
-    .contact-socials a:hover {
-      background: var(--color-text);
-      color: var(--color-bg);
-    }
-
     @media (max-width: 900px) {
       .contact-grid {
         grid-template-columns: 1fr;
       }
     }
   </style>
+  <link rel="stylesheet" href="/css/marquee.css" />
+  <link rel="stylesheet" href="/css/footer.css" />
+  <link rel="stylesheet" href="/css/popup.css" />
+  <link rel="stylesheet" href="/css/whatsapp.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/images/og-image.png" />
 </head>
 
 <body>
@@ -231,6 +195,7 @@
             class="chevron">▾</span></button>
         <a href="/insights.html" class="nav-link" data-chars>Insights</a>
         <a href="/contact.html" class="nav-link" data-chars>Contact</a>
+        <a href="/start.html" class="header-cta">Start a Project</a>
       </nav>
       <button class="menu-toggle" id="menu-toggle"
         aria-label="Toggle menu"><span></span><span></span><span></span></button>
@@ -368,7 +333,7 @@
           <div class="contact-info reveal reveal-delay-2">
             <div class="contact-info-block">
               <h3>Our Studio</h3>
-              <p>A3, Clover park, Viman nagar pune.<br />411014</p>
+              <p>A3, Clover Park, Viman Nagar, Pune<br />Maharashtra — 411014</p>
             </div>
             <div class="contact-info-block">
               <h3>Email Us</h3>
@@ -426,7 +391,7 @@
         </div>
         <div class="footer-column">
           <div class="footer-contact">
-            <p class="footer-address">A3, Clover park, Viman nagar pune.<br />411014</p>
+            <p class="footer-address">A3, Clover Park, Viman Nagar, Pune<br />Maharashtra — 411014</p>
             <div class="footer-contact-links">
               <a href="mailto:contactuswynklo@gmail.com">contactuswynklo@gmail.com</a>
               <a href="tel:+918491041426">+91 8491041426</a>
@@ -440,9 +405,40 @@
             href="#">Privacy Policy</a><span class="footer-legal-sep">/</span><a href="#">Sitemap</a></div>
       </div>
     </div>
+      <!-- Trust Badges -->
+      <div class="footer-trust">
+        <span class="footer-trust-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          SSL Secured
+        </span>
+        <span class="footer-trust-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          Verified Business
+        </span>
+        <span class="footer-trust-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          Global Clients
+        </span>
+        <span class="footer-trust-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          Registered Company
+        </span>
+      </div>
+
+      <div class="footer-made-in">
+        <span>Crafted with precision in India</span>
+        <span class="flag">🇮🇳</span>
+      </div>
     <div class="footer-watermark" aria-hidden="true">W<span>y</span>nkl<span>o</span></div>
   </footer>
-  <script type="module" src="/js/main.js"></script>
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/918491041426?text=Hi%20Wynklo%2C%20I'm%20interested%20in%20your%20services" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <div class="whatsapp-btn">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </div>
+    <span class="whatsapp-tooltip">Chat with us</span>
+  </a>
+<script type="module" src="/js/main.js"></script>
 </body>
 
 </html>

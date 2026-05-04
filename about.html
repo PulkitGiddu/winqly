@@ -5,34 +5,39 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- ══ Primary SEO Meta Tags ══ -->
-  <title>About Wynklo | Web & App Development Team in Pune, India</title>
-  <meta name="description"
-    content="Meet the Wynklo team — designers, developers, and deliberate thinkers crafting creative digital solutions with technical precision. Based in Pune, India, we build websites and apps that drive real business results." />
-  <meta name="keywords" content="about Wynklo, web development team Pune, app developers India, digital agency team, Wynklo founders, tech startup Pune" />
+  <!-- Font Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Security Headers -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+
+  <!-- Primary SEO Meta Tags -->
+  <title>About Wynklo | Our Story, Values & Team | Digital Agency Pune</title>
+  <meta name="description" content="Meet the Wynklo team. We're designers, developers, and deliberate thinkers building digital solutions from Pune, India. Learn about our story, values, and the people behind your next project." />
+  <meta name="keywords" content="about Wynklo, digital agency team, web development team Pune, our story, tech company India, design team" />
   <meta name="author" content="Wynklo" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="theme-color" content="#1a1a18" />
   <link rel="canonical" href="https://www.wynklo.com/about.html" />
 
-  <!-- ══ Open Graph / Facebook ══ -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.wynklo.com/about.html" />
-  <meta property="og:title" content="About Wynklo | Our Team & Story" />
-  <meta property="og:description" content="Meet the designers, developers, and deliberate thinkers behind Wynklo. Creative solutions with technical precision." />
+  <meta property="og:title" content="About Wynklo | Our Story, Values & Team" />
+  <meta property="og:description" content="Designers, developers, and deliberate thinkers building digital solutions from Pune, India." />
   <meta property="og:image" content="https://www.wynklo.com/images/og-image.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
   <meta property="og:site_name" content="Wynklo" />
   <meta property="og:locale" content="en_IN" />
 
-  <!-- ══ Twitter Card ══ -->
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="About Wynklo | Our Team & Story" />
-  <meta name="twitter:description" content="Meet the team behind Wynklo — designers, developers, and deliberate thinkers in Pune, India." />
+  <meta name="twitter:title" content="About Wynklo | Our Story & Team" />
+  <meta name="twitter:description" content="Meet the team behind Wynklo — designers, developers, and deliberate thinkers." />
   <meta name="twitter:image" content="https://www.wynklo.com/images/og-image.png" />
 
-  <!-- ══ Structured Data: BreadcrumbList ══ -->
+  <!-- Structured Data: BreadcrumbList -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -44,187 +49,120 @@
   }
   </script>
 
-  <!-- ══ Stylesheets ══ -->
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="/css/variables.css" />
   <link rel="stylesheet" href="/css/reset.css" />
   <link rel="stylesheet" href="/css/base.css" />
   <link rel="stylesheet" href="/css/header.css" />
+  <link rel="stylesheet" href="/css/about-section.css" />
   <link rel="stylesheet" href="/css/gallery.css" />
   <link rel="stylesheet" href="/css/marquee.css" />
   <link rel="stylesheet" href="/css/footer.css" />
   <link rel="stylesheet" href="/css/popup.css" />
+  <link rel="stylesheet" href="/css/whatsapp.css" />
 
-  <!-- ══ Favicon ══ -->
+  <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="apple-touch-icon" href="/images/og-image.png" />
+
   <style>
     .about-hero {
       padding-top: calc(var(--header-height) + 4rem);
-      padding-bottom: var(--space-3xl);
+      padding-bottom: var(--space-2xl);
     }
-
+    .about-hero h1 {
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: clamp(3rem, 8vw, 6rem);
+      text-transform: uppercase;
+      line-height: 0.92;
+      letter-spacing: -0.02em;
+      color: var(--color-text);
+    }
     .about-hero-eyebrow {
       font-family: var(--font-mono);
       font-size: 0.7rem;
       text-transform: uppercase;
       letter-spacing: 0.15em;
       color: var(--color-text-muted);
-      margin-top: var(--space-lg);
-      margin-bottom: var(--space-md);
+      margin: var(--space-lg) 0 var(--space-md);
     }
-
-    .about-hero h1 {
-      font-family: var(--font-heading);
-      font-weight: 800;
-      font-size: clamp(3rem, 8vw, 7rem);
-      text-transform: uppercase;
-      line-height: 0.92;
-      letter-spacing: -0.02em;
-      color: var(--color-text);
-      max-width: 16ch;
-    }
-
-    .about-description {
-      margin-top: var(--space-2xl);
+    .about-description { display: flex; flex-direction: column; gap: var(--space-md); }
+    .about-description p {
       font-family: var(--font-body);
-      font-size: clamp(1rem, 1.5vw, 1.25rem);
+      font-size: clamp(1rem, 1.5vw, 1.2rem);
       line-height: 1.7;
       color: var(--color-text-muted);
-      max-width: 60ch;
+      max-width: 65ch;
     }
-
     .about-studio-image {
       width: 100%;
       border-radius: var(--radius-lg);
       overflow: hidden;
       margin-bottom: var(--space-section);
     }
-
-    .about-studio-image img {
-      width: 100%;
-      height: auto;
-      aspect-ratio: 21/9;
-      object-fit: cover;
-    }
-
-    /* ── Our Values Section (matching screenshot) ── */
-    .our-values {
-      padding: var(--space-section) 0;
-    }
-
+    .about-studio-image img { width: 100%; height: auto; display: block; }
+    .our-values { padding: var(--space-section) 0; }
     .our-values-layout {
       display: grid;
-      grid-template-columns: 1fr 1.5fr;
+      grid-template-columns: 1fr 1.2fr;
       gap: var(--space-3xl);
       align-items: start;
+      margin-bottom: var(--space-2xl);
     }
-
     .our-values h2 {
       font-family: var(--font-heading);
       font-weight: 800;
-      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      font-size: clamp(2rem, 4vw, 3.5rem);
       text-transform: uppercase;
+      line-height: 1;
       color: var(--color-text);
-      line-height: 0.92;
-      font-style: italic;
     }
-
-    .values-content {
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-xl);
-    }
-
-    .values-tabs {
-      display: flex;
-      gap: var(--space-lg);
-    }
-
+    .values-tabs { display: flex; gap: var(--space-sm); margin-bottom: var(--space-md); flex-wrap: wrap; }
     .values-tab-btn {
       font-family: var(--font-mono);
-      font-size: 0.7rem;
+      font-size: 0.75rem;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.08em;
+      padding: 0.5em 1.2em;
+      border: 1px solid rgba(243,241,231,0.15);
+      border-radius: var(--radius-pill);
       color: var(--color-text-muted);
       background: none;
-      border: none;
       cursor: pointer;
-      padding: 0.3em 0;
-      border-bottom: 1px solid transparent;
-      transition: color 0.3s, border-color 0.3s;
+      transition: all 0.3s;
     }
-
-    .values-tab-btn:hover,
-    .values-tab-btn.active {
-      color: var(--color-text);
-      border-bottom-color: var(--color-text);
+    .values-tab-btn.active, .values-tab-btn:hover {
+      color: var(--color-bg);
+      background: var(--color-yellow);
+      border-color: var(--color-yellow);
     }
-
     .values-description {
       font-family: var(--font-body);
-      font-size: clamp(1rem, 1.5vw, 1.2rem);
+      font-size: clamp(1rem, 1.5vw, 1.15rem);
       line-height: 1.7;
       color: var(--color-text-muted);
-      max-width: 50ch;
     }
-
-    .values-images {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 0;
-      margin-top: var(--space-xl);
-    }
-
-    .values-images img {
-      width: 100%;
-      aspect-ratio: 1;
-      object-fit: cover;
-    }
-
-    /* ── Meet The Team Section ── */
-    .about-team {
-      padding: var(--space-section) 0;
-    }
-
+    .values-images { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-md); }
+    .values-images img { width: 100%; border-radius: var(--radius-lg); aspect-ratio: 1; object-fit: cover; }
+    .about-team { padding: var(--space-section) 0; }
     .about-team h2 {
       font-family: var(--font-heading);
       font-weight: 800;
       font-size: clamp(2rem, 4vw, 3.5rem);
       text-transform: uppercase;
+      line-height: 1;
       color: var(--color-text);
-      margin-bottom: var(--space-3xl);
+      margin-bottom: var(--space-2xl);
     }
-
-    .team-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: var(--space-lg);
-    }
-
-    .team-member {
-      text-align: center;
-    }
-
+    .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-lg); }
     .team-member-photo {
-      width: 100%;
-      aspect-ratio: 1;
       border-radius: var(--radius-lg);
       overflow: hidden;
-      margin-bottom: var(--space-md);
-      background: var(--color-bg-card);
+      margin-bottom: var(--space-sm);
+      aspect-ratio: 3/4;
     }
-
-    .team-member-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.4s var(--ease-out);
-    }
-
-    .team-member:hover .team-member-photo img {
-      transform: scale(1.05);
-    }
-
+    .team-member-photo img { width: 100%; height: 100%; object-fit: cover; }
     .team-member-name {
       font-family: var(--font-heading);
       font-weight: 700;
@@ -232,74 +170,17 @@
       text-transform: uppercase;
       color: var(--color-text);
     }
-
     .team-member-role {
       font-family: var(--font-mono);
-      font-size: 0.65rem;
+      font-size: 0.7rem;
       text-transform: uppercase;
       letter-spacing: 0.08em;
       color: var(--color-text-muted);
-      margin-top: 0.3em;
     }
-
-    /* Join the Family card */
-    .team-member--join .team-member-photo {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(243, 241, 231, 0.05);
-      border: 2px dashed rgba(243, 241, 231, 0.15);
-      cursor: pointer;
-      transition: border-color 0.3s, background 0.3s;
-    }
-
-    .team-member--join:hover .team-member-photo {
-      border-color: var(--color-yellow);
-      background: rgba(248, 212, 76, 0.05);
-    }
-
-    .join-content {
-      text-align: center;
-      padding: var(--space-lg);
-    }
-
-    .join-icon {
-      font-size: 3rem;
-      margin-bottom: var(--space-sm);
-      opacity: 0.4;
-    }
-
-    .join-text {
-      font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: 1.3rem;
-      text-transform: uppercase;
-      color: var(--color-text);
-    }
-
-    .join-subtext {
-      font-family: var(--font-mono);
-      font-size: 0.65rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--color-text-muted);
-      margin-top: 0.3em;
-    }
-
-
-
     @media (max-width: 900px) {
-      .our-values-layout {
-        grid-template-columns: 1fr;
-      }
-
-      .values-images {
-        grid-template-columns: 1fr;
-      }
-
-      .team-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
+      .our-values-layout { grid-template-columns: 1fr; }
+      .values-images { grid-template-columns: 1fr; }
+      .team-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -315,6 +196,7 @@
             class="chevron">▾</span></button>
         <a href="/insights.html" class="nav-link" data-chars>Insights</a>
         <a href="/contact.html" class="nav-link" data-chars>Contact</a>
+        <a href="/start.html" class="header-cta">Start a Project</a>
       </nav>
       <button class="menu-toggle" id="menu-toggle"
         aria-label="Toggle menu"><span></span><span></span><span></span></button>
@@ -533,7 +415,7 @@
         </div>
         <div class="footer-column">
           <div class="footer-contact">
-            <p class="footer-address">A3, Clover park, Viman nagar pune.<br />411014</p>
+            <p class="footer-address">A3, Clover Park, Viman Nagar, Pune<br />Maharashtra — 411014</p>
             <div class="footer-contact-links">
               <a href="mailto:contactuswynklo@gmail.com">contactuswynklo@gmail.com</a>
               <a href="tel:+918491041426">+91 8491041426</a>
@@ -547,6 +429,30 @@
             href="#">Privacy Policy</a><span class="footer-legal-sep">/</span><a href="#">Sitemap</a></div>
       </div>
     </div>
+      <!-- Trust Badges -->
+      <div class="footer-trust">
+        <span class="footer-trust-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          SSL Secured
+        </span>
+        <span class="footer-trust-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          Verified Business
+        </span>
+        <span class="footer-trust-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          Global Clients
+        </span>
+        <span class="footer-trust-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          Registered Company
+        </span>
+      </div>
+
+      <div class="footer-made-in">
+        <span>Crafted with precision in India</span>
+        <span class="flag">🇮🇳</span>
+      </div>
     <div class="footer-watermark" aria-hidden="true">W<span>y</span>nkl<span>o</span></div>
   </footer>
 
@@ -555,7 +461,14 @@
     <p class="cta-popup-text">Got a project in mind?<br />We'd love to hear about it.</p>
     <a href="/start.html" class="cta-popup-link">Get in touch</a>
   </div>
-  <script type="module" src="/js/main.js"></script>
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/918491041426?text=Hi%20Wynklo%2C%20I'm%20interested%20in%20your%20services" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <div class="whatsapp-btn">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </div>
+    <span class="whatsapp-tooltip">Chat with us</span>
+  </a>
+<script type="module" src="/js/main.js"></script>
   <script>
     // Values tabs switching
     const tabBtns = document.querySelectorAll('.values-tab-btn');

@@ -5,11 +5,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- ══ Font Preconnect ══ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- ══ Security Headers ══ -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+
   <!-- ══ Primary SEO Meta Tags ══ -->
   <title>Wynklo | Web Development, App Development & Digital Agency in Pune, India</title>
   <meta name="description"
     content="Wynklo is a leading web development and app development agency in Pune, India. We build custom websites, mobile apps, AI-powered platforms, and digital solutions that drive business growth. Get a free preview before you build." />
-  <meta name="keywords" content="web development agency Pune, app development India, custom website development, mobile app development, digital agency Pune, AI integration, web design Pune, Wynklo, software development company India, React developer, Next.js agency" />
+  <meta name="keywords"
+    content="web development agency Pune, app development India, custom website development, mobile app development, digital agency Pune, AI integration, web design Pune, Wynklo, software development company India, React developer, Next.js agency" />
   <meta name="author" content="Wynklo" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="googlebot" content="index, follow" />
@@ -20,7 +29,8 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.wynklo.com/" />
   <meta property="og:title" content="Wynklo | Web & App Development Agency in Pune, India" />
-  <meta property="og:description" content="We build custom websites, mobile apps & AI-powered digital platforms. See your app before you build it. Get a free preview today." />
+  <meta property="og:description"
+    content="We build custom websites, mobile apps & AI-powered digital platforms. See your app before you build it. Get a free preview today." />
   <meta property="og:image" content="https://www.wynklo.com/images/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -31,7 +41,8 @@
   <!-- ══ Twitter Card ══ -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Wynklo | Web & App Development Agency in Pune, India" />
-  <meta name="twitter:description" content="Custom websites, mobile apps & AI-powered platforms. See your app before you build it." />
+  <meta name="twitter:description"
+    content="Custom websites, mobile apps & AI-powered platforms. See your app before you build it." />
   <meta name="twitter:image" content="https://www.wynklo.com/images/og-image.png" />
   <meta name="twitter:image:alt" content="Wynklo — Digital Design & Development Agency" />
 
@@ -191,6 +202,7 @@
   <link rel="stylesheet" href="/css/variables.css" />
   <link rel="stylesheet" href="/css/reset.css" />
   <link rel="stylesheet" href="/css/base.css" />
+  <link rel="stylesheet" href="/css/preloader.css" />
   <link rel="stylesheet" href="/css/header.css" />
   <link rel="stylesheet" href="/css/hero.css" />
   <link rel="stylesheet" href="/css/projects.css" />
@@ -198,16 +210,23 @@
   <link rel="stylesheet" href="/css/about-section.css" />
   <link rel="stylesheet" href="/css/gallery.css" />
   <link rel="stylesheet" href="/css/insights-section.css" />
+  <link rel="stylesheet" href="/css/testimonials.css" />
   <link rel="stylesheet" href="/css/marquee.css" />
   <link rel="stylesheet" href="/css/footer.css" />
   <link rel="stylesheet" href="/css/popup.css" />
+  <link rel="stylesheet" href="/css/whatsapp.css" />
 
   <!-- ══ Favicon ══ -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="apple-touch-icon" href="/images/og-image.png" />
 </head>
 
-<body>
+<body class="loading">
+
+  <!-- ══ Preloader ══ -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-logo">Wynklo</div>
+  </div>
 
   <!-- ══════════════════════════════════════
        HEADER
@@ -226,6 +245,7 @@
         </button>
         <a href="/insights.html" class="nav-link" data-chars>Insights</a>
         <a href="/contact.html" class="nav-link" data-chars>Contact</a>
+        <a href="/start.html" class="header-cta">Start a Project</a>
       </nav>
 
       <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
@@ -398,6 +418,34 @@
         <div class="logo-separator"></div>
         <div class="logo-item logo-item--wide"><span>WORKROOM</span></div>
         <div class="logo-separator"></div>
+      </div>
+    </section>
+
+    <!-- ══ Trust Bar ══ -->
+    <section class="trust-bar" id="trust-bar">
+      <div class="container">
+        <div class="trust-bar-grid">
+          <div class="trust-item reveal">
+            <span class="trust-icon">🚀</span>
+            <span class="trust-number" data-target="50">15+</span>
+            <span class="trust-label">Projects Delivered</span>
+          </div>
+          <div class="trust-item reveal reveal-delay-1">
+            <span class="trust-icon">⭐</span>
+            <span class="trust-number">100%</span>
+            <span class="trust-label">Client Satisfaction</span>
+          </div>
+          <div class="trust-item reveal reveal-delay-2">
+            <span class="trust-icon">📅</span>
+            <span class="trust-number" data-target="2">2+</span>
+            <span class="trust-label">Years of Excellence</span>
+          </div>
+          <div class="trust-item reveal reveal-delay-3">
+            <span class="trust-icon">💬</span>
+            <span class="trust-number">24/7</span>
+            <span class="trust-label">Support Available</span>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -711,7 +759,7 @@
             <p>We’re redefining how businesses go digital.
               Instead of guessing what you’ll get, we let you experience it first — with live previews, clear features,
               and transparent pricing.
-              Because building a business shouldn’t start with uncertainty..</p>
+              Because building a business shouldn’t start with uncertainty.</p>
             <a href="/about.html" class="link-arrow">About us</a>
           </div>
           <div class="about-block reveal reveal-delay-2">
@@ -723,7 +771,68 @@
               before you spend a single rupee.
 
               Because great businesses aren’t built on assumptions.
-              They’re built on understanding..</p>
+              They’re built on understanding.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════
+         TESTIMONIALS
+         ══════════════════════════════════════ -->
+    <section class="testimonials-section section" id="testimonials">
+      <div class="container">
+        <hr class="separator" style="margin-bottom: var(--space-3xl);" />
+        <div class="testimonials-header reveal">
+          <h2>What Our Clients Say</h2>
+          <p>Real feedback from businesses we've helped grow.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card reveal reveal-delay-1">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-quote">Wynklo delivered our e-commerce platform ahead of schedule with outstanding
+              quality. The AI-powered preview they showed us before development even started gave us complete confidence
+              in the final product.</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">R</div>
+              <div class="testimonial-author-info">
+                <span class="testimonial-author-name">Rahul Mehta</span>
+                <span class="testimonial-author-role">Founder, SnatchMart</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card reveal reveal-delay-2">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-quote">Professional, responsive, and incredibly skilled. They understood our vision
+              from day one and turned it into a digital experience that our users love. Highly recommended for any
+              serious business.</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">S</div>
+              <div class="testimonial-author-info">
+                <span class="testimonial-author-name">Sarah Thompson</span>
+                <span class="testimonial-author-role">Director, Forward Studio</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card reveal reveal-delay-3">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-quote">What sets Wynklo apart is their transparency. No hidden costs, no surprises.
+              They showed us exactly what we'd get, and the final result exceeded expectations. A truly trustworthy
+              team.</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">A</div>
+              <div class="testimonial-author-info">
+                <span class="testimonial-author-name">Amit Patel</span>
+                <span class="testimonial-author-role">CEO, Bet2Learn</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -905,8 +1014,8 @@
         <div class="footer-column">
           <div class="footer-contact">
             <p class="footer-address">
-              A3, Clover park, Viman nagar pune.<br />
-              411014
+              A3, Clover Park, Viman Nagar, Pune<br />
+              Maharashtra — 411014
             </p>
             <div class="footer-contact-links">
               <a href="mailto:contactuswynklo@gmail.com">contactuswynklo@gmail.com</a>
@@ -927,6 +1036,43 @@
           <a href="#">Sitemap</a>
         </div>
       </div>
+
+      <!-- Trust Badges -->
+      <div class="footer-trust">
+        <span class="footer-trust-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          </svg>
+          SSL Secured
+        </span>
+        <span class="footer-trust-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+            <polyline points="22 4 12 14.01 9 11.01" />
+          </svg>
+          Verified Business
+        </span>
+        <span class="footer-trust-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M2 12h20" />
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+          </svg>
+          Global Clients
+        </span>
+        <span class="footer-trust-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+          </svg>
+          Registered Company
+        </span>
+      </div>
+
+      <div class="footer-made-in">
+        <span>Crafted with precision in India</span>
+        <span class="flag">🇮🇳</span>
+      </div>
     </div>
 
     <div class="footer-watermark" aria-hidden="true">
@@ -942,8 +1088,18 @@
     <a href="/start.html" class="cta-popup-link">Get in touch</a>
   </div>
 
-
-  <!-- Scripts -->
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/918491041426?text=Hi%20Wynklo%2C%20I'm%20interested%20in%20your%20services" target="_blank"
+    class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <div class="whatsapp-btn">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+      </svg>
+    </div>
+    <span class="whatsapp-tooltip">Chat with us</span>
+  </a>
+<!-- Scripts -->
   <script type="module" src="/js/main.js"></script>
 </body>
 

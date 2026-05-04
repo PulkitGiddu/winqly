@@ -185,6 +185,32 @@
   transform: rotate(180deg);
 }
 
+/* ── Header CTA Button ── */
+.header-cta {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  padding: 0.6em 1.4em;
+  border-radius: var(--radius-pill);
+  background: #000;
+  color: var(--color-yellow);
+  border: 2px solid #000;
+  transition: all 0.3s var(--ease-out);
+  white-space: nowrap;
+  margin-left: 0.5rem;
+}
+
+.header-cta:hover {
+  background: transparent;
+  color: #000;
+}
+
+.header-cta::after {
+  display: none;
+}
+
 /* ── Services Mega Menu (half-page overlay) ── */
 .mega-menu {
   position: fixed;
@@ -424,6 +450,10 @@
 /* ── Responsive ── */
 @media (max-width: 900px) {
   .nav-desktop {
+    display: none;
+  }
+
+  .header-cta {
     display: none;
   }
 
